@@ -14,24 +14,34 @@ public class Odd {
         double D;
         System.out.println("Решает квадратное уровнение");
         System.out.println("Ведите a, b, c ");
-        if (a == 0) {
+        if (b == 0) {
             double x;
-             x = -c /b;
-             x = -a / c;
-            x = a / -b;
+            x = -b / a;
             System.out.println("x = " + x);
         } else {
-            D = b * b - 4 * a * c;
-            if (D > 0) {
-                double x1, x2;
-                x1 = (-b - Math.sqrt(D)) / (2 * a);
-                x2 = (-b + Math.sqrt(D)) / (2 * a);
-                System.out.println("Корни: x1 = " + x1 + "x2 = " + x2);
-            } else if (D == 0) {
+            if (c == 0) {
                 double x;
-                x = -b / (2 * a);
-                System.out.println("Корень есть x " + x);
+                x = -c / b;
+                System.out.println("x = " + x);
             } else {
+                 if (a == 0) {
+                    double x;
+                    x = -a / b;
+                    System.out.println("x = " + x);
+                } else {
+                    D = b * b - 4 * a * c;
+                    if (D > 0) {
+                        double x1, x2;
+                        x1 = (-b - Math.sqrt(D)) / (2 * a);
+                        x2 = (-b + Math.sqrt(D)) / (2 * a);
+                        System.out.println("Корни: x1 = " + x1 + "x2 = " + x2);
+                    } else if (D == 0) {
+                        double x;
+                        x = -b / (2 * a);
+                        System.out.println("Корень есть x " + x);
+                    } else {
+                    }
+                }
             }
         }
     }
